@@ -2,12 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Pallet configuration</title>
+
   </head>
   <body>
-    <div>test</div>
+    <div class="container">
+      <h1>Pallet configuration</h1>
+
+      <form id="palletForm">
+        <h3>Case dimensions (mm):</h3>
+        <div  class="form-element">
+          <input type="number" name="caseWidth" id="caseWidth" placeholder="Width">
+          <input type="number" name="caseLength" id="caseLength" placeholder="Length">
+          <input type="number" name="caseHeight" id="caseHeight" placeholder="Height">
+        </div>
+        <h3>Pallet size:</h3>
+        <div class="form-element">
+          <p>Pallet:</p>
+          <select id="palletSize">
+            <option id="ukPal" value="ukPal">UK pallet 1200 x 1000</option>
+            <option id="eurPal" value="eurPal">EUR pallet 1200 x 800</option>
+          </select>
+        </div>
+        <div class="form-element">
+          <p>Load heigth:</p>
+            <input type="number" name="loadHeight" id="loadHeight" placeholder="pallet height">
+        </div>
+        <input class="submit-btn" type="submit" value="Calculate">
+      </form>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
