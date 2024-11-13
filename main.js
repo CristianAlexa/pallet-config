@@ -1,15 +1,28 @@
-const domElements = {
-    palletFormEl: document.getElementById('palletForm'),
-    caseWidthEl: document.getElementById('caseWidth'),
-    caseLengthEl: document.getElementById('caseLength'),
-    caseHeightEl: document.getElementById('caseHeight'),
-    palletSizeEl: document.getElementById('palletSize'),
-    loadHeightEl: document.getElementById('loadHeight')
-}
+
+    const palletFormEl = document.getElementById('palletForm')
+    const caseWidthEl = document.getElementById('caseWidth')
+    const caseLengthEl = document.getElementById('caseLength')
+    const caseHeightEl = document.getElementById('caseHeight')
+    const palletSizeEl = document.getElementById('palletSize')
+    const loadHeightEl = document.getElementById('loadHeight')
 
 
-domElements.palletFormEl.addEventListener('submit', (e) => {
+
+palletFormEl.addEventListener('submit', (e) => {
     e.preventDefault()
-    console.log('clicked')
     
+    const caseData = {
+        caseWidth: caseWidthEl.value,
+        caseLength: caseLengthEl.value,
+        caseHeight: caseHeightEl.value
+    }
+
+    const palletData = {
+        palletSize: palletSizeEl.value,
+        loadHeight: loadHeightEl.value
+    }
+    
+    
+
+    console.log(caseData, palletData)
 })
